@@ -1,4 +1,8 @@
-
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -10,7 +14,10 @@ body {
   background-color: #8d8d8d;
 }
 
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   height: 100vh;
 }
 

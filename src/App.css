@@ -1,17 +1,11 @@
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
 .App {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #drum-machine {
-    width: 33%;
     border: 5px solid orange;
     display: flex;
     background-color: #b3b3b3;
