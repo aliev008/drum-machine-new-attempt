@@ -1,6 +1,7 @@
 import { LeftSection } from './components/leftSection/leftSection.component';
+import { RightSection } from './components/rightSection/rightSection.component';
 
-import './App.css';
+import './App.scss';
 
 const App = () => {
 
@@ -8,11 +9,7 @@ const App = () => {
     <div className="App">
       <div id='drum-machine'>
       <LeftSection />
-        <div className='right-section'>
-          <div id='display'>
-            <h3>Sound Name</h3>
-          </div>
-        </div>
+      <RightSection />
       </div>
     </div>
   );

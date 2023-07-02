@@ -1,16 +1,14 @@
-.left-section {
+.right-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    gap: 10px;
-    width: 250px;
+    gap: 10px;  
+    width: 200px;
 
     .drum-pad {
         border: 3px solid black;
         padding: 15px;
-        text-align: center;
-        min-width: 53px;
     }
 }

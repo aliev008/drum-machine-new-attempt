@@ -4,19 +4,21 @@ import { AudioBankContext } from '../../context/audioBank.context';
 import './leftSection.style.scss';
 
 export const LeftSection = () => {
-  const { audioBank, changeAudioBank } = useContext(AudioBankContext);
+  const { audioBank, changeAudioBank, setCurrentSound } = useContext(AudioBankContext);
   const buttons = Object.keys(audioBank);
 
-  function play(event: any) {
+  function play(event: any, soundName: string) {
     const elem = event.target;
     const child = elem.querySelector("audio");
+    setCurrentSound(soundName);
     child.play();
   }
 
   return (
     <div className='left-section'>
       {buttons.map((elem, index) => {
-        return (<div key={index} className='drum-pad' onClick={(event) => play(event)}>{elem} <audio className='clip' id={elem} src={audioBank[elem as keyof typeof audioBank].src}></audio></div>);
+        const { src, name } = audioBank[elem as keyof typeof audioBank];
+        return (<div key={index} className='drum-pad' onClick={(event) => play(event, name)}>{elem} <audio className='clip' id={elem} src={src}></audio></div>);
       })}
     </div>
   );
