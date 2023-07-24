@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, MouseEvent } from 'react';
 import { AudioBankContext } from '../../context/audioBank.context';
 
 import './leftSection.style.scss';
@@ -11,6 +11,7 @@ export const LeftSection = () => {
     const elem = event.target;
     const child = elem.querySelector("audio");
     setCurrentSound(soundName);
+    child.currentTime = 0;
     child.play();
   }
 
